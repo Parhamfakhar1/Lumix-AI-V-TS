@@ -1,0 +1,75 @@
+# data/config/default.yaml
+system:
+  name: "Lumix AI V-TS"
+  version: "1.0.0"
+  mode: "production"
+  debug: false
+
+model:
+  type: "nano_transformer"
+  hidden_size: 128
+  num_layers: 4
+  num_heads: 4
+  vocab_size: 8192
+  max_seq_length: 256
+  dropout: 0.1
+  learning_rate: 0.001
+  batch_size: 8
+  checkpoint_interval: 1000
+
+search:
+  google_api_key: "${GOOGLE_API_KEY}"
+  search_engine_id: "${SEARCH_ENGINE_ID}"
+  max_results_per_query: 3
+  query_variations: 9
+  cache_ttl_hours: 24
+  request_timeout_seconds: 10
+  retry_attempts: 3
+  rate_limit_per_minute: 100
+
+memory:
+  sqlite_path: "data/storage/lumix.db"
+  archive_path: "data/archive/"
+  cache_size_mb: 100
+  knowledge_graph_enabled: true
+  compression_level: 6
+  retention_days: 365
+
+learning:
+  incremental_enabled: true
+  batch_size: 100
+  training_interval_minutes: 60
+  max_samples_per_training: 1000
+  validation_split: 0.2
+  early_stopping_patience: 5
+
+performance:
+  max_goroutines: 4
+  memory_limit_mb: 200
+  cpu_cores: 2
+  gpu_enabled: false
+  quantization_enabled: true
+  pruning_enabled: true
+
+offline:
+  enabled: true
+  knowledge_base_path: "data/knowledge/"
+  fallback_mode: "intelligent"
+  sync_on_reconnect: true
+
+logging:
+  level: "info"
+  format: "json"
+  output_path: "logs/lumix.log"
+  max_size_mb: 100
+  max_age_days: 30
+  compression: true
+
+api:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout_seconds: 30
+  write_timeout_seconds: 30
+  max_connections: 100
+  cors_enabled: true
+  rate_limit_per_ip: 60

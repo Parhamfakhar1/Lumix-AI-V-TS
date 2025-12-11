@@ -1,0 +1,6 @@
+{"id": 1, "input": "سلام", "output": "سلام! چطور می‌تونم کمکتون کنم؟", "category": "greeting"}
+{"id": 2, "input": "چطوری؟", "output": "خوبم ممنون! شما چطورید؟", "category": "greeting"}
+{"id": 3, "input": "خداحافظ", "output": "خداحافظ! روز خوبی داشته باشید.", "category": "greeting"}
+{"id": 4, "input": "اسمت چیه؟", "output": "من Lumix AI V-TS هستم، یک دستیار هوشمند.", "category": "identity"}
+{"id": 5, "input": "چه کاری می‌تونی انجام بدی؟", "output": "می‌تونم سوالات شما رو جواب بدم، جستجو کنم و یاد بگیرم.", "category": "capability"}
+// ... 9995 نمونه دیگر
